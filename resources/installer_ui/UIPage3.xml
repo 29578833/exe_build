@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="600,372" caption="0,0,0,126">
+    <Default name="VScrollBar" value="button1normalimage=&quot;file=&apos;scrollbtntop.png&apos; source=&apos;0,0,14,14&apos;&quot; button1hotimage=&quot;file=&apos;scrollbtntop.png&apos; source=&apos;14,0,28,14&apos;&quot; button1pushedimage=&quot;file=&apos;scrollbtntop.png&apos; source=&apos;28,0,42,14&apos;&quot; button2normalimage=&quot;file=&apos;scrollbtnbuttom.png&apos; source=&apos;0,0,14,14&apos;&quot; button2hotimage=&quot;file=&apos;scrollbtnbuttom.png&apos; source=&apos;14,0,28,14&apos;&quot; button2pushedimage=&quot;file=&apos;scrollbtnbuttom.png&apos; source=&apos;28,0,42,14&apos;&quot; thumbnormalimage=&quot;file=&apos;scrollclick.png&apos; corner=&apos;2,2,2,2&apos; source=&apos;0,0,14,33&apos; &quot; thumbhotimage=&quot;file=&apos;scrollclick.png&apos; corner=&apos;4,11,4,19&apos; source=&apos;14,0,28,33&apos; corner=&apos;4,11,4,19&apos; &quot; thumbpushedimage=&quot;file=&apos;scrollclick.png&apos; source=&apos;28,0,42,33&apos;  &quot; bknormalimage=&quot;file=&apos;scrollbk.png&apos;&quot;" />
+    <VerticalLayout width="600" height="370" bkimage="Page3.png">
+        <Button name="Min3Btn" float="true" pos="560,7,0,0" width="10" height="10" bkimage="min.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        <Button name="Close3Btn" float="true" pos="580,7,0,0" width="10" height="10" bkimage="close.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        <Label name="Loading" float="true" pos="246,108,0,0" width="110" height="110" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" font="3" align="center" />
+        <Text name="InstallStateText" float="true" pos="126,300,0,0" width="360" height="20" textpadding="2,0,2,0" textcolor="#00FFFFFF" font="2" align="centerwrap" />
+    </VerticalLayout>
+</Window>

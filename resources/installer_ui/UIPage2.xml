@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="600,372" caption="0,0,0,126">
+    <Default name="VScrollBar" value="button1normalimage=&quot;file=&apos;scrollbtntop.png&apos; source=&apos;0,0,14,14&apos;&quot; button1hotimage=&quot;file=&apos;scrollbtntop.png&apos; source=&apos;14,0,28,14&apos;&quot; button1pushedimage=&quot;file=&apos;scrollbtntop.png&apos; source=&apos;28,0,42,14&apos;&quot; button2normalimage=&quot;file=&apos;scrollbtnbuttom.png&apos; source=&apos;0,0,14,14&apos;&quot; button2hotimage=&quot;file=&apos;scrollbtnbuttom.png&apos; source=&apos;14,0,28,14&apos;&quot; button2pushedimage=&quot;file=&apos;scrollbtnbuttom.png&apos; source=&apos;28,0,42,14&apos;&quot; thumbnormalimage=&quot;file=&apos;scrollclick.png&apos; corner=&apos;2,2,2,2&apos; source=&apos;0,0,14,33&apos; &quot; thumbhotimage=&quot;file=&apos;scrollclick.png&apos; corner=&apos;4,11,4,19&apos; source=&apos;14,0,28,33&apos; corner=&apos;4,11,4,19&apos; &quot; thumbpushedimage=&quot;file=&apos;scrollclick.png&apos; source=&apos;28,0,42,33&apos;  &quot; bknormalimage=&quot;file=&apos;scrollbk.png&apos;&quot;" />
+    <VerticalLayout width="600" height="370" bkimage="Page2.png">
+        <Button name="Min2Btn" float="true" pos="560,7,0,0" width="10" height="10" bkimage="min.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        <Button name="Close2Btn" float="true" pos="580,7,0,0" width="10" height="10" bkimage="close.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        <Button name="StartInstall2Btn" text="立即安装" float="true" pos="220,284,0,0" width="160" height="44" textcolor="#000061B9" disabledtextcolor="#FFA7A6AA" font="0" align="center" normalimage="startInstall_1.png" hotimage="startInstall_2.png" pushedimage="startInstall_3.png" />
+        <Button name="BackBtn" float="true" pos="540,341,0,0" width="50" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        <Edit name="InstallDirEdit" float="true" pos="134,142,0,0" width="326" height="30" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Button name="ChangeDirBtn" text="更改" visible="false" float="true" pos="473,141,0,0" width="72" height="33" textcolor="#003C3C3C" disabledtextcolor="#FFA7A6AA" font="1" align="center" normalimage="changedir_1.png" hotimage="changedir_2.png" pushedimage="changedir_3.png" />
+        <Text name="InstallDirText" float="true" pos="134,208,0,0" width="360" height="20" textpadding="2,0,2,0" textcolor="#00FFFFFF" font="2" align="wrap" />
+        <Text text="暂不支持更改安装目录" float="true" pos="135,182,0,0" width="360" height="20" textpadding="2,0,2,0" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" font="2" align="wrap" />
+    </VerticalLayout>
+</Window>

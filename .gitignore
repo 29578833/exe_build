@@ -1,0 +1,15 @@
+﻿# ===== 汽修宝电脑版 桌面端工程 .gitignore =====
+
+# 构建产物（work/ 全部可由 scripts\build.bat 复现，不入库）
+work/
+
+# 废弃/暂存区（确认后可整目录删除）
+archive/
+
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+*.log
+
+# 临时
+*.tmp

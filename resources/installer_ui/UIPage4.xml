@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="600,372" caption="0,0,0,126">
+    <Default name="VScrollBar" value="button1normalimage=&quot;file=&apos;scrollbtntop.png&apos; source=&apos;0,0,14,14&apos;&quot; button1hotimage=&quot;file=&apos;scrollbtntop.png&apos; source=&apos;14,0,28,14&apos;&quot; button1pushedimage=&quot;file=&apos;scrollbtntop.png&apos; source=&apos;28,0,42,14&apos;&quot; button2normalimage=&quot;file=&apos;scrollbtnbuttom.png&apos; source=&apos;0,0,14,14&apos;&quot; button2hotimage=&quot;file=&apos;scrollbtnbuttom.png&apos; source=&apos;14,0,28,14&apos;&quot; button2pushedimage=&quot;file=&apos;scrollbtnbuttom.png&apos; source=&apos;28,0,42,14&apos;&quot; thumbnormalimage=&quot;file=&apos;scrollclick.png&apos; corner=&apos;2,2,2,2&apos; source=&apos;0,0,14,33&apos; &quot; thumbhotimage=&quot;file=&apos;scrollclick.png&apos; corner=&apos;4,11,4,19&apos; source=&apos;14,0,28,33&apos; corner=&apos;4,11,4,19&apos; &quot; thumbpushedimage=&quot;file=&apos;scrollclick.png&apos; source=&apos;28,0,42,33&apos;  &quot; bknormalimage=&quot;file=&apos;scrollbk.png&apos;&quot;" />
+    <VerticalLayout width="600" height="370" bkimage="Page4.png">
+        <Button name="Min4Btn" float="true" pos="560,7,0,0" width="10" height="10" bkimage="min.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        <Button name="Close4Btn" float="true" pos="580,7,0,0" width="10" height="10" bkimage="close.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        <Button name="StartUseBtn" text="立即运行" float="true" pos="220,197,0,0" width="160" height="44" textcolor="#000061B9" disabledtextcolor="#FFA7A6AA" font="0" align="center" normalimage="startInstall_1.png" hotimage="startInstall_2.png" pushedimage="startInstall_3.png" />
+    </VerticalLayout>
+</Window>

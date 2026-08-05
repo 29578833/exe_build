@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="620,390" caption="0,0,0,126" bktrans="true">
+    <Font name="微软雅黑" size="20" bold="false" italic="false" />
+    <Font name="微软雅黑" size="16" bold="false" italic="false" />
+    <Font name="微软雅黑" size="12" bold="false" italic="false" />
+    <Font name="微软雅黑" size="24" bold="true" italic="false" />
+    <Default name="VScrollBar" value="button1normalimage=&quot;file=&apos;scrollbtntop.png&apos; source=&apos;0,0,14,14&apos;&quot; button1hotimage=&quot;file=&apos;scrollbtntop.png&apos; source=&apos;14,0,28,14&apos;&quot; button1pushedimage=&quot;file=&apos;scrollbtntop.png&apos; source=&apos;28,0,42,14&apos;&quot; button2normalimage=&quot;file=&apos;scrollbtnbuttom.png&apos; source=&apos;0,0,14,14&apos;&quot; button2hotimage=&quot;file=&apos;scrollbtnbuttom.png&apos; source=&apos;14,0,28,14&apos;&quot; button2pushedimage=&quot;file=&apos;scrollbtnbuttom.png&apos; source=&apos;28,0,42,14&apos;&quot; thumbnormalimage=&quot;file=&apos;scrollclick.png&apos; corner=&apos;2,2,2,2&apos; source=&apos;0,0,14,33&apos; &quot; thumbhotimage=&quot;file=&apos;scrollclick.png&apos; corner=&apos;4,11,4,19&apos; source=&apos;14,0,28,33&apos; corner=&apos;4,11,4,19&apos; &quot; thumbpushedimage=&quot;file=&apos;scrollclick.png&apos; source=&apos;28,0,42,33&apos;  &quot; bknormalimage=&quot;file=&apos;scrollbk.png&apos;&quot;" />
+    <VerticalLayout width="620" height="390" bkimage="MainBk.png">
+        <VerticalLayout height="10" />
+        <HorizontalLayout width="610" height="370">
+            <HorizontalLayout width="10" />
+            <HorizontalLayout>
+                         <TabLayout name="MainTab">
+                        <HorizontalLayout>
+                            <UIPage1 bkcolor="00000000" height="0" size="480, 0" width="600" />
+                        </HorizontalLayout>
+                        <HorizontalLayout>
+                            <UIPage2 bkcolor="00000000" />
+                        </HorizontalLayout>
+                        <HorizontalLayout>
+                            <UIPage3 bkcolor="00000000" />
+                        </HorizontalLayout>
+                        <HorizontalLayout>
+                            <UIPage4 bkcolor="00000000" />
+                        </HorizontalLayout>
+                    </TabLayout>
+            </HorizontalLayout>
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

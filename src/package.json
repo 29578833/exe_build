@@ -1,0 +1,42 @@
+﻿{
+  "name": "QXB",
+  "build": "1489637051",
+  "main": "https://www.qixiubao.cn?client=NW",
+  "version": "2.0.0",
+  "homepage": "https://www.qixiubao.cn?client=NW",
+  "description": "汽修宝 - 电脑版",
+  "window": {
+    "title": "汽修宝 - 电脑版",
+    "icon": "./app/icon/1024.png",
+    "position": "center",
+    "width": 900,
+    "height": 680,
+    "toolbar": true,
+    "frame": false,
+    "resizable": true,
+    "min_width": 900,
+    "min_height": 600,
+    "show_in_taskbar": true,
+    "single-instance": false
+  },
+  "node-remote": [
+    "http://localhost:8090",
+    "http://staging-h5-pc-41.nanxinwang.com",
+    "http://www.qixiubao.cn",
+    "https://www.qixiubao.cn",
+    "https://im2.nanxinwang.com",
+    "http://localhost:8010"
+  ],
+  "contributors": [
+    {
+      "name": "JasonChao",
+      "email": "83409266@qq.com",
+      "web": "http://www.qixiubao.cn"
+    }
+  ],
+  "webkit": {
+    "plugin": true
+  },
+  "inject_js_start": "./app/inject.js",
+  "dependencies": {}
+}
