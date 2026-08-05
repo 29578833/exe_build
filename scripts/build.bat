@@ -1,6 +1,7 @@
 @echo off
 rem ============================================================
-rem  build.bat - One-click build: assemble -^> pack -^> patch -^> verify
+rem  build.bat - One-click build:
+rem    assemble -> set_icon -> pack -> patch -> verify
 rem  Output: dist\QiXiuBaoInst_v2_win7.exe
 rem ============================================================
 setlocal
@@ -8,6 +9,8 @@ set ROOT=%~dp0..
 
 call "%~dp0assemble.bat"
 if errorlevel 1 ( echo [ERROR] assemble failed & exit /b 1 )
+call "%~dp0set_icon.bat"
+if errorlevel 1 ( echo [ERROR] set_icon failed & exit /b 1 )
 call "%~dp0pack_rar.bat"
 if errorlevel 1 ( echo [ERROR] pack failed & exit /b 1 )
 call "%~dp0patch.bat"

@@ -20,8 +20,9 @@
 │       ├── inject.js          ← 刷新按钮修复脚本
 │       └── icon/              ← 4 个图标
 ├── scripts/                   ★ 构建脚本（全部相对路径，可移植）
-│   ├── build.bat              ← 一键构建：assemble → pack → patch → verify
+│   ├── build.bat              ← 一键构建：assemble → set_icon → pack → patch → verify
 │   ├── assemble.bat           ← 组装 work\build（src + resources → 运行时目录）
+│   ├── set_icon.js/.bat       ← 替换主程序图标（Resource Hacker，汽修宝 logo）
 │   ├── pack_rar.bat           ← 打 RAR（work\build → work\newpack.rar，m3:22）
 │   ├── patch.bat              ← 嵌入安装器（优先 Node，回退 Python）
 │   ├── patch_installer.js     ← PE 补丁（Node 版，自动定位 RAR 偏移）
@@ -34,6 +35,7 @@
 │   │   ├── unins000.dat            ← 原版卸载日志（进安装包）
 │   │   ├── unins000.exe            ← 原版卸载器（进安装包）
 │   │   ├── qixiubao_setup.ico
+│   │   ├── qixiubao_app.ico        ← 主程序 exe 图标（从原版 exe 提取，7 尺寸）
 │   │   └── build.iss               ← 备用 Inno Setup 方案（v2 未用）
 │   ├── installer_ui/          ← NSIS 壳品牌图（startInstall_*.png / UIFrame.xml 等）
 │   └── website_bundle/        ← 网页端 bundle 备份（排查用）
@@ -43,7 +45,8 @@
 │   ├── 解构报告.md             ← 原始解构报告
 │   └── 测试报告_A方案.md       ← A 方案（0.90/0.114 内核）历史测试
 ├── tools/
-│   └── Rar.exe                ← WinRAR 命令行（打 RAR 用）
+│   ├── Rar.exe                ← WinRAR 命令行（打 RAR 用）
+│   └── ResourceHacker/        ← exe 图标资源替换工具（set_icon 用）
 ├── work/                      ← 构建产物（git 忽略，可随时重建）
 │   ├── build/                 ← 组装目录 = NW.js 0.72 运行时 + 壳源码
 │   └── newpack.rar            ← RAR 中间产物
@@ -112,3 +115,4 @@ scripts\verify.bat       # 校验内嵌 RAR 一致
 | `docs/v2构建说明.md` | v2（NW.js 0.72 / Win7）复现构建 + 验证状态 |
 | `docs/解构报告.md` | 原始解构报告（技术栈、根因分析、方案对比） |
 | `docs/测试报告_A方案.md` | A 方案（0.90/0.114 内核）历史测试记录 |
+
