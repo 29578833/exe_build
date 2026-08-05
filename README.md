@@ -116,3 +116,12 @@ scripts\verify.bat       # 校验内嵌 RAR 一致
 | `docs/解构报告.md` | 原始解构报告（技术栈、根因分析、方案对比） |
 | `docs/测试报告_A方案.md` | A 方案（0.90/0.114 内核）历史测试记录 |
 
+---
+
+## 五、开机自启
+
+- **默认开启**：启动一次即写入注册表 `HKCU\Software\Microsoft\Windows\CurrentVersion\Run` 的 `QiXiuBaoPC`，
+  指向当前 `汽修宝电脑版.exe`（用户级，无需管理员；每次启动自动更新路径）。
+- **关闭**：带参数启动一次 `汽修宝电脑版.exe --no-autostart`（会删除自启项且本次不写入），
+  或直接删除注册表该项。
+- 实现位置：`src/app/node-main.js`（package.json 的 `node-main` 字段加载；注意 node-main 里取启动参数用全局 `nw.App.argv`，`process.argv` 不含应用参数）。
