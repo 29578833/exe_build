@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * 替换 NSIS 安装器 RES/132 资源数据（RAR）—— 汽修宝 v2 Win7 版构建（Node 版）
  * 用法:
@@ -145,6 +145,7 @@ const embedded = newData.subarray(OLD_RAR_OFF, OLD_RAR_OFF + newrar.length);
 if (!embedded.equals(newrar)) throw new Error('RAR 嵌入不完整');
 if (newData.subarray(OLD_RAR_OFF, OLD_RAR_OFF + 4).toString('latin1') !== 'Rar!') throw new Error('RAR 头校验失败');
 
-fs.mkdirSync(path.dirname(OUT), { recursive: true });
+const outDir = path.dirname(OUT);
+if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
 fs.writeFileSync(OUT, newData);
 console.log('已保存 ' + OUT + ' (' + (newData.length / 1048576).toFixed(1) + ' MB)');
