@@ -1,6 +1,9 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * set_icon.js - Replace the main exe icon with the QXB logo.
+ * Usage: node set_icon.js [build-dir]   (default: build, i.e. work\build)
+ *   x86: node set_icon.js build         -> work\build\汽修宝电脑版.exe
+ *   x64: node set_icon.js build_x64     -> work\build_x64\汽修宝电脑版.exe
  * Uses Resource Hacker: delete ALL icons first, then add the QXB icon set
  * (resources/installer/qixiubao_app.ico, extracted from the original exe).
  * NOTE: delete and add MUST be separate Resource Hacker invocations.
@@ -11,8 +14,9 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
+const BUILD_DIR = process.argv[2] || 'build';
 const RH = path.join(ROOT, 'tools', 'ResourceHacker', 'ResourceHacker.exe');
-const EXE = path.join(ROOT, 'work', 'build', '汽修宝电脑版.exe');
+const EXE = path.join(ROOT, 'work', BUILD_DIR, '汽修宝电脑版.exe');
 const ICO = path.join(ROOT, 'resources', 'installer', 'qixiubao_app.ico');
 const TMP = EXE + '.tmp';
 
@@ -30,4 +34,4 @@ run(['-open', EXE, '-save', TMP,
 run(['-open', TMP, '-save', EXE,
      '-action', 'addoverwrite', '-res', ICO, '-mask', 'ICONGROUP,1,']);
 if (fs.existsSync(TMP)) fs.unlinkSync(TMP);
-console.log('[OK] set_icon done.');
+console.log('[OK] set_icon done (' + BUILD_DIR + ').');

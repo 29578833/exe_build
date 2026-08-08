@@ -1,6 +1,9 @@
 @echo off
 rem ============================================================
-rem  pack_rar.bat - Build work\newpack.rar from work\build.
+rem  pack_rar.bat - Build RAR payload from the build dir.
+rem  Usage: pack_rar.bat [x64]
+rem    x86 -> work\build      -> work\newpack.rar
+rem    x64 -> work\build_x64  -> work\newpack_x64.rar
 rem  MUST keep the original compression level (RAR3 m3 -ep1) or
 rem  the NSIS built-in extractor drops the trailing files.
 rem  Small files first, nw.dll last.
@@ -8,8 +11,16 @@ rem ============================================================
 setlocal
 set ROOT=%~dp0..
 set RAR=%ROOT%\tools\Rar.exe
+
+set ARCH=%~1
+if /i "%ARCH%"=="x64" goto :x64
 set BUILD=%ROOT%\work\build
 set OUT=%ROOT%\work\newpack.rar
+goto :done
+:x64
+set BUILD=%ROOT%\work\build_x64
+set OUT=%ROOT%\work\newpack_x64.rar
+:done
 
 if not exist "%RAR%" ( echo [ERROR] missing tools\Rar.exe & exit /b 1 )
 if not exist "%BUILD%\nw.dll" ( echo [ERROR] run assemble.bat first & exit /b 1 )
