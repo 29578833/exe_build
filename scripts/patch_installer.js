@@ -6,7 +6,7 @@
  * 默认（相对本工程根目录）:
  *   SRC     = resources/installer/original_installer.exe   （原版安装包，md5 59fcdb7e...）
  *   NEW_RAR = work/newpack.rar                             （新内核 RAR 数据包）
- *   OUT     = dist/QiXiuBaoInst_v2_win7.exe                （最终安装包）
+ *   OUT     = dist/QiXiuBaoInstV2_x32.exe                  （最终安装包）
  * 说明：自动从 PE 资源目录定位内嵌 RAR（RES/132），无需硬编码偏移。
  */
 'use strict';
@@ -17,7 +17,7 @@ const ROOT = path.resolve(__dirname, '..');
 const args = process.argv.slice(2);
 const SRC = path.resolve(ROOT, args[0] || 'resources/installer/original_installer.exe');
 const NEW_RAR = path.resolve(ROOT, args[1] || 'work/newpack.rar');
-const OUT = path.resolve(ROOT, args[2] || 'dist/QiXiuBaoInst_v2_win7.exe');
+const OUT = path.resolve(ROOT, args[2] || 'dist/QiXiuBaoInstV2_x32.exe');
 
 const SECTION_ALIGN = 0x1000;
 const FILE_ALIGN = 0x200;

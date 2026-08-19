@@ -1,6 +1,6 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
- * 验证安装包：dist\QiXiuBaoInst_v2_win7.exe 内嵌 RAR 与 work\newpack.rar 完全一致
+ * 验证安装包：dist\QiXiuBaoInstV2_x32.exe 内嵌 RAR 与 work\newpack.rar 完全一致
  * 用法: node verify.js [EXE] [NEW_RAR]
  */
 'use strict';
@@ -9,7 +9,7 @@ const path = require('path');
 const crypto = require('crypto');
 
 const args = process.argv.slice(2);
-const EXE = path.resolve(args[0] || 'dist/QiXiuBaoInst_v2_win7.exe');
+const EXE = path.resolve(args[0] || 'dist/QiXiuBaoInstV2_x32.exe');
 const NEWRAR = path.resolve(args[1] || 'work/newpack.rar');
 
 if (!fs.existsSync(EXE)) throw new Error('找不到安装包: ' + EXE);

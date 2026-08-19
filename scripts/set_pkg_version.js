@@ -11,12 +11,18 @@ const path = require('path');
 
 const pkg = path.resolve(process.argv[2] || '');
 const ver = process.argv[3];
-if (!pkg || !ver) throw new Error('usage: node set_pkg_version.js <package.json> <version>');
+const frame = process.argv[4];
+if (!pkg || !ver) throw new Error('usage: node set_pkg_version.js <package.json> <version> [frame]');
 if (!fs.existsSync(pkg)) throw new Error('not found: ' + pkg);
 
 let text = fs.readFileSync(pkg, 'utf8');
 if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1); // strip UTF-8 BOM
 const obj = JSON.parse(text);
 obj.version = ver;
+if (frame !== undefined) {
+  obj.window = obj.window || {};
+  obj.window.frame = (frame === 'true' || frame === true);
+  console.log('[OK] package.json window.frame -> ' + obj.window.frame);
+}
 fs.writeFileSync(pkg, JSON.stringify(obj, null, 2) + '\n');
 console.log('[OK] package.json version -> ' + ver);

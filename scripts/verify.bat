@@ -8,11 +8,11 @@ set ROOT=%~dp0..
 
 set ARCH=%~1
 if /i "%ARCH%"=="x64" goto :x64
-set EXE=%ROOT%\dist\QiXiuBaoInst_v2_win7.exe
+set EXE=%ROOT%\dist\QiXiuBaoInstV2_x32.exe
 set NEWRAR=%ROOT%\work\newpack.rar
 goto :done
 :x64
-set EXE=%ROOT%\dist\QiXiuBaoInst_v2.2_x64.exe
+set EXE=%ROOT%\dist\QiXiuBaoInstV2_x64.exe
 set NEWRAR=%ROOT%\work\newpack_x64.rar
 :done
 

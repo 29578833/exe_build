@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 // Rename nw.exe -> 汽修宝电脑版.exe in a build dir (UTF-8 safe).
 // Usage: node rename_main_exe.js <build-dir>
 'use strict';

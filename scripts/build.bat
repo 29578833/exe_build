@@ -3,19 +3,19 @@ rem ============================================================
 rem  build.bat - One-click build:
 rem    assemble -> set_icon -> pack -> patch -> verify
 rem  Usage: build.bat [x64]
-rem    (no arg) = 32-bit x86  -> dist\QiXiuBaoInst_v2_win7.exe
-rem    x64      = 64-bit      -> dist\QiXiuBaoInst_v2.2_x64.exe
+rem    (no arg) = 32-bit x86  -> dist\QiXiuBaoInstV2_x32.exe
+rem    x64      = 64-bit      -> dist\QiXiuBaoInstV2_x64.exe
 rem ============================================================
 setlocal
 set ROOT=%~dp0..
 
 set ARCH=%~1
 if /i "%ARCH%"=="x64" goto :x64
-set OUT_NAME=QiXiuBaoInst_v2_win7.exe
+set OUT_NAME=QiXiuBaoInstV2_x32.exe
 set ARCH=
 goto :done
 :x64
-set OUT_NAME=QiXiuBaoInst_v2.2_x64.exe
+set OUT_NAME=QiXiuBaoInstV2_x64.exe
 :done
 
 call "%~dp0assemble.bat" %ARCH%

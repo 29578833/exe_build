@@ -13,7 +13,7 @@ set RES=%ROOT%\resources\installer
 set ARCH=%~1
 if /i "%ARCH%"=="x64" goto :x64
 set BUILD=%ROOT%\work\build
-set VER_OVERRIDE=
+set VER_OVERRIDE=2.2.0
 goto :done
 :x64
 set BUILD=%ROOT%\work\build_x64
@@ -32,7 +32,7 @@ copy /y "%SRC%\package.json" "%BUILD%\package.json" >nul
 if not exist "%BUILD%\app" mkdir "%BUILD%\app"
 xcopy /y /e /i /q "%SRC%\app\*" "%BUILD%\app\" >nul
 
-rem 1b) x64 line uses its own version number (v2.2.x)
+rem 1b) both lines pin the version number (v2.2.x)
 if not "%VER_OVERRIDE%"=="" (
   where node >nul 2>nul
   if %errorlevel%==0 node "%~dp0set_pkg_version.js" "%BUILD%\package.json" %VER_OVERRIDE%
