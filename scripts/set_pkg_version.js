@@ -2,7 +2,7 @@
 /**
  * set_pkg_version.js - 重写 package.json 的 version 字段（保留其余内容与缩进风格）
  * 用法: node set_pkg_version.js <package.json 路径> <版本号>
- * 说明: 64 位线（v2.2.x）与 32 位线（v2.0.x）共用 src/ 壳源码，仅在组装时覆盖版本号。
+ * 说明: x64 / x32 两条线共用 src/ 壳源码，仅在组装时统一覆盖版本号（当前 2.0.0）。
  * 注意: src/package.json 带 UTF-8 BOM，读入时先剥离 BOM，写出时不再带 BOM。
  */
 'use strict';
