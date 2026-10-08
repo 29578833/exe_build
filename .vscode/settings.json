@@ -1,0 +1,7 @@
+{
+    "i18n-ally.localesPaths": [
+        "work/build_x64/locales",
+        "work/verify_ex_x64/locales",
+        "work/verify_ex_x32/locales"
+    ]
+}

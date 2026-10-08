@@ -39,5 +39,6 @@
     "plugin": true
   },
   "inject_js_start": "./app/inject.js",
+  "node-main": "./app/node-main.js",
   "dependencies": {}
 }

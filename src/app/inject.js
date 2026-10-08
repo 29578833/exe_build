@@ -12,8 +12,6 @@
 // 功能2：开机自启动（v2.1 新增，保留）
 //   原理：启动时写入 HKCU\Software\Microsoft\Windows\CurrentVersion\Run\QXB，
 //   指向 汽修宝电脑版.exe 完整路径。幂等覆盖（reg add /f），路径随安装位置。
-// 功能3（已移除）：托盘恢复最大化（v2.4/v2.5 曾劫持 win.show() 强制最大化，
-//   用户实测点托盘仍不恢复全屏，按需求回滚去除，恢复页面原生托盘行为）。
 (function () {
   var RESTART_KEY = '__qxb_restarting';
   var restarting = false;
